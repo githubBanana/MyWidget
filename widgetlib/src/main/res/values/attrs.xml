@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundProgressView">
+        <attr name="roundWidth" format="dimension"/>
+        <attr name="round_color" format="color|reference"/>
+        <attr name="arc_color" format="color|reference"/>
+        <attr name="text_color" format="color|reference"/>
+        <attr name="text_size" format="dimension"/>
+    </declare-styleable>
+</resources>
