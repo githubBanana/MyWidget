@@ -89,13 +89,13 @@ public abstract class BaseProgressView extends View {
      * 设置延迟时长
      * @param time
      */
-    public synchronized void setFreshSpeed(int time) {
+    public synchronized void setFreshSpeedMs(int time) {
         this._delayTime = time <= 0 ? 1 : time;
     }
 
     @Override
     protected void onDetachedFromWindow() {
-        _threadRunning = false;
+        stopThread();
         super.onDetachedFromWindow();
     }
 

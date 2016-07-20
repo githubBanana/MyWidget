@@ -7,4 +7,15 @@
         <attr name="text_color" format="color|reference"/>
         <attr name="text_size" format="dimension"/>
     </declare-styleable>
+    <declare-styleable name="StripProgressView">
+        <attr name="strip_color" format="color|reference"/>
+        <attr name="run_color" format="color|reference"/>
+        <attr name="padding_left" format="dimension"/>
+        <attr name="padding_top" format="dimension"/>
+        <attr name="padding_right" format="dimension"/>
+        <attr name="padding_bottom" format="dimension"/>
+        <attr name="radius" format="float"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color|reference"/>
+    </declare-styleable>
 </resources>

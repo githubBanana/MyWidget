@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xs.widgetlib.progressview.RoundProgressView;
+import com.xs.widgetlib.progressview.StripProgressView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,13 +16,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final RoundProgressView mRpv = (RoundProgressView) findViewById(R.id.rpv_test);
-        mRpv.setFinalValue(300);
+        mRpv.setFinalValue(400);
         mRpv.setLimitValue(400);
         final Button mBtnBegin = (Button) findViewById(R.id.btn_begin);
         mBtnBegin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mRpv.setFreshSpeed(1);
+                mRpv.setFreshSpeedMs(1);
                 mRpv.runThread();
             }
         });
@@ -32,6 +33,23 @@ public class MainActivity extends AppCompatActivity {
                 mRpv.stopThread();
             }
         });
+
+
+
+        final StripProgressView mSpv = (StripProgressView) findViewById(R.id.spv_test);
+
+        final Button mBtnSpvForword = (Button) findViewById(R.id.btn_spv_start);
+        mBtnSpvForword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mSpv.setLimitValue(1000);
+                mSpv.setFinalValue(1000);
+                mSpv.setFreshSpeedMs(10);
+                mSpv.runThread();
+            }
+        });
+
+
 
     }
 }

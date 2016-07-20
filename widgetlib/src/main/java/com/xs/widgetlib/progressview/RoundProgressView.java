@@ -18,7 +18,7 @@ import com.xs.widgetlib.R;
  */
 public class RoundProgressView extends BaseProgressView {
 
-    private Paint mRoundPaint;
+    private Paint       mRoundPaint;
     private Paint       mArcPaint;
     private Paint       mTextPaint;
     private float       _roundWidth;//弧段宽度
