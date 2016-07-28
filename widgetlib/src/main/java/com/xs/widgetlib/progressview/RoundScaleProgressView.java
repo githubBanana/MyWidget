@@ -16,7 +16,7 @@ import com.xs.widgetlib.R;
  * @date: 2016-07-19 17:33
  * @email Xs.lin@foxmail.com
  */
-public class RoundProgressView extends BaseProgressView {
+public class RoundScaleProgressView extends BaseProgressView {
 
     private Paint       mRoundPaint;
     private Paint       mArcPaint;
@@ -30,11 +30,11 @@ public class RoundProgressView extends BaseProgressView {
     private int         _ingValue = 0;
     private int         _limitValue ;
 
-    public RoundProgressView(Context context) {
+    public RoundScaleProgressView(Context context) {
         super(context);
     }
 
-    public RoundProgressView(Context context, AttributeSet attrs) {
+    public RoundScaleProgressView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView(context,attrs);
     }

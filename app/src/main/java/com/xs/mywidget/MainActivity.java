@@ -1,10 +1,13 @@
 package com.xs.mywidget;
 
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.xs.widgetlib.dialog.progress.RoundFragment;
 import com.xs.widgetlib.progressview.RoundProgressView;
 import com.xs.widgetlib.progressview.StripProgressView;
 
@@ -49,7 +52,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * dialog show
+         */
+        final Button mBtnShowRoundDialog = (Button) findViewById(R.id.btn_roundDialog);
+        mBtnShowRoundDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RoundFragment.getInstance().show(getSupportFragmentManager(), RoundFragment.TAG);
+                mBtnShowRoundDialog.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dismissProgress(RoundFragment.TAG);
+                    }
+                },3000);
+            }
+        });
+
+
 
 
     }
+
+    private void dismissProgress(final String tag) {
+        Fragment prev = getSupportFragmentManager().findFragmentByTag(tag);
+        if (prev != null) {
+            DialogFragment df = (DialogFragment) prev;
+            df.dismiss();
+        }
+    }
+
 }

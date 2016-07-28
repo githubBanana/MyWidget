@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:gravity="center">
+    <com.xs.widgetlib.progressview.RoundScaleProgressView
+        android:id="@+id/rpv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:roundWidth="5dp"
+        app:round_color="@android:color/darker_gray"
+        app:arc_color="@android:color/holo_green_dark"
+        app:text_color="@android:color/holo_green_dark"
+        app:text_size="15dp"/>
+
+</LinearLayout>
